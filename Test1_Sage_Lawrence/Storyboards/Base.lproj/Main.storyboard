@@ -13,7 +13,7 @@
         <!--Action Flicks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Action Flicks" id="BYZ-38-t0r" customClass="ViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Action Flicks" id="BYZ-38-t0r" customClass="ActionFlicksViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,12 +75,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976.3358778625955" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1976" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Infomation-->
         <scene sceneID="TmB-yO-aKR">
             <objects>
-                <viewController id="V1l-wa-0VZ" sceneMemberID="viewController">
+                <viewController title="Infomation" id="V1l-wa-0VZ" customClass="InformationViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rNk-b2-zLy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,31 +185,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tie-Rm-QeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2823.6641221374043" y="-2.1126760563380285"/>
-        </scene>
-        <!--Action Flicks-->
-        <scene sceneID="YTi-wh-BMF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7kC-rO-dMX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Action Flicks" image="figure.run.circle" catalog="system" id="kS6-JA-VYL"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qc6-BK-h5C">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FwD-AA-2as"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1dT-7R-ZYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1049.6183206106871" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2824" y="-2"/>
         </scene>
         <!--Weekend Watch List-->
         <scene sceneID="Mgl-A2-sf3">
             <objects>
-                <viewController id="AGk-dg-5tN" sceneMemberID="viewController">
+                <viewController id="AGk-dg-5tN" customClass="WatchListViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sBr-kH-fVR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,18 +252,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7kC-rO-dMX" kind="relationship" relationship="viewControllers" id="vug-Gc-4u0"/>
                         <segue destination="oit-lF-c22" kind="relationship" relationship="viewControllers" id="dHf-Ke-X6H"/>
+                        <segue destination="sfL-ar-zzm" kind="relationship" relationship="viewControllers" id="O1K-Uh-oXx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAC-TK-sIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="122.90076335877862" y="-2.1126760563380285"/>
         </scene>
-        <!--Watchlist-->
+        <!--Navigation-->
         <scene sceneID="nLY-El-QQf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oit-lF-c22" sceneMemberID="viewController">
+                <navigationController title="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="oit-lF-c22" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Watchlist" selectedImage="eye.circle.fill" catalog="system" id="wdt-Y4-3He"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0nh-Tb-mha">
@@ -298,10 +279,29 @@
             </objects>
             <point key="canvasLocation" x="123" y="732"/>
         </scene>
+        <!--Navigation-->
+        <scene sceneID="Eub-AV-4yL">
+            <objects>
+                <navigationController title="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="sfL-ar-zzm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Tdq-d1-hRn"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="f4n-Gi-YE0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sr3-a0-Za4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LoL-2M-uX6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sXA-1L-DWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <image name="eye.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="figure.run.circle" catalog="system" width="128" height="123"/>
         <image name="list.and.film" catalog="system" width="128" height="85"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="107"/>
         <systemColor name="systemBackgroundColor">
