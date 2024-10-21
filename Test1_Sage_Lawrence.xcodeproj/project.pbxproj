@@ -10,7 +10,7 @@
 		1AA93CA92CC5D2C500EA0466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93CA82CC5D2C500EA0466 /* AppDelegate.swift */; };
 		1AA93CAB2CC5D2C500EA0466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93CAA2CC5D2C500EA0466 /* SceneDelegate.swift */; };
 		1AA93CB02CC5D2C500EA0466 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1AA93CAF2CC5D2C500EA0466 /* Base */; };
-		1AA93CB32CC5D2C500EA0466 /* ActionFlicks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93CB12CC5D2C500EA0466 /* ActionFlicks.xcdatamodeld */; };
+		1AA93CB32CC5D2C500EA0466 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93CB12CC5D2C500EA0466 /* Model.xcdatamodeld */; };
 		1AA93CB52CC5D2C700EA0466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AA93CB42CC5D2C700EA0466 /* Assets.xcassets */; };
 		1AA93CB82CC5D2C700EA0466 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1AA93CB72CC5D2C700EA0466 /* Base */; };
 		1AA93CC32CC5DA6000EA0466 /* ActionFlicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93CC22CC5DA6000EA0466 /* ActionFlicksViewController.swift */; };
@@ -73,7 +73,7 @@
 				1AA93CBF2CC5D2D600EA0466 /* Storyboards */,
 				1AA93CB42CC5D2C700EA0466 /* Assets.xcassets */,
 				1AA93CB92CC5D2C700EA0466 /* Info.plist */,
-				1AA93CB12CC5D2C500EA0466 /* ActionFlicks.xcdatamodeld */,
+				1AA93CB12CC5D2C500EA0466 /* Model.xcdatamodeld */,
 			);
 			path = Test1_Sage_Lawrence;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA93CC32CC5DA6000EA0466 /* ActionFlicksViewController.swift in Sources */,
-				1AA93CB32CC5D2C500EA0466 /* ActionFlicks.xcdatamodeld in Sources */,
+				1AA93CB32CC5D2C500EA0466 /* Model.xcdatamodeld in Sources */,
 				1AA93CCB2CC6B07E00EA0466 /* ClipViewController.swift in Sources */,
 				1AA93CA92CC5D2C500EA0466 /* AppDelegate.swift in Sources */,
 				1AA93CCD2CC6B11D00EA0466 /* MapViewController.swift in Sources */,
@@ -413,13 +413,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1AA93CB12CC5D2C500EA0466 /* ActionFlicks.xcdatamodeld */ = {
+		1AA93CB12CC5D2C500EA0466 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				1AA93CB22CC5D2C500EA0466 /* Test1_Sage_Lawrence.xcdatamodel */,
 			);
 			currentVersion = 1AA93CB22CC5D2C500EA0466 /* Test1_Sage_Lawrence.xcdatamodel */;
-			path = ActionFlicks.xcdatamodeld;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
