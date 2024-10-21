@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -107,6 +108,9 @@
                                 <rect key="frame" x="200.66666666666663" y="211.33333333333334" width="192.33333333333337" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="list.and.film" catalog="system" title="Watch Clips"/>
+                                <connections>
+                                    <segue destination="psq-gR-gvz" kind="show" id="aj6-w9-KEC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nx-ty-9jR">
                                 <rect key="frame" x="0.0" y="266.33333333333331" width="393" height="44"/>
@@ -150,6 +154,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SSq-sv-ffB" kind="showDetail" id="XfN-4o-kbz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -185,7 +192,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tie-Rm-QeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2824" y="-2"/>
+            <point key="canvasLocation" x="2781" y="-2"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="sWd-ew-Mq5">
+            <objects>
+                <viewController id="SSq-sv-ffB" customClass="MapViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E4C-9j-36T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw1-hb-1pH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TZ6-t6-YzY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TZ6-t6-YzY" firstAttribute="trailing" secondItem="Aw1-hb-1pH" secondAttribute="trailing" id="WP9-4R-xqr"/>
+                            <constraint firstItem="TZ6-t6-YzY" firstAttribute="bottom" secondItem="Aw1-hb-1pH" secondAttribute="bottom" id="igs-n5-RC6"/>
+                            <constraint firstItem="Aw1-hb-1pH" firstAttribute="top" secondItem="TZ6-t6-YzY" secondAttribute="top" id="kyq-QL-dKr"/>
+                            <constraint firstItem="Aw1-hb-1pH" firstAttribute="leading" secondItem="TZ6-t6-YzY" secondAttribute="leading" id="rIa-QX-bwf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeo-9Y-tvO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3575" y="-2"/>
+        </scene>
+        <!--Clip View Controller-->
+        <scene sceneID="RBV-y0-TNq">
+            <objects>
+                <viewController id="psq-gR-gvz" customClass="ClipViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxh-i0-WQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Id2-EK-4e6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q2H-VA-ARP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7J-Tr-dHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781" y="732"/>
         </scene>
         <!--Weekend Watch List-->
         <scene sceneID="Mgl-A2-sf3">
@@ -222,6 +272,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="psq-gR-gvz" kind="show" id="RlF-SO-qYK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -239,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anT-ic-esN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="732"/>
+            <point key="canvasLocation" x="1976" y="732"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gIh-ZP-q5u">
@@ -248,6 +301,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="S8T-Bp-Y8j"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JhD-b2-ljJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -277,7 +331,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg1-Fr-W4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="732"/>
+            <point key="canvasLocation" x="1050" y="732"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="Eub-AV-4yL">
@@ -300,6 +354,9 @@
             <point key="canvasLocation" x="1050" y="-2"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RlF-SO-qYK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="eye.circle.fill" catalog="system" width="128" height="123"/>
         <image name="list.and.film" catalog="system" width="128" height="85"/>

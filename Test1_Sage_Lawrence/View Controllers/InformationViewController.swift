@@ -9,21 +9,38 @@ import UIKit
 
 class InformationViewController: UIViewController {
 
+    //MARK: Properties
+    //TODO: Core Data
+    
+    //MARK: Outlets
+    //TODO: All the Labels
+    
+    //MARK: Actions
+    //TODO: Watch Clip Btn, Add to Watchlist Btn
+    
+    //Add to Watchlist: Alert pops up
+    /*
+     Title: Add to watchlist?
+     Text: Would you like to add \(movie name) by \(direction) to your weekend watchlist?
+     Cancel | Add It!
+     
+     Confirm:
+        Saves title, genre, and URL for the video
+        Pop user back to the list of action  movies
+     
+     Cancel:
+        Dismisses
+     */
+    
+    //Watch Clip: Opens the Video URL and automatically plays it
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //TODO: TableView Delegate
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension InformationViewController: UITableViewDelegate {
+    //TODO: Holds address & presidents name
 }

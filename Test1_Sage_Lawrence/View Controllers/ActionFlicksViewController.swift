@@ -8,22 +8,26 @@
 import UIKit
 
 class ActionFlicksViewController: UIViewController {
-
+    
+    //MARK: Properties
+    //TODO: CoreData Properties & Initial Set Up
+    
+    //MARK: Outlets
+    //TODO: Outlets
+    
+    //TODO: Load JSON
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //TODO: Delegate self
     }
-    
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        //TODO: Tapping on a collectionViewCell opens up the InformationViewController
     }
-    */
-
 }
+
+extension ActionFlicksViewController: UICollectionViewDelegate {
+    //TODO: three cells evenly spaced with a small space between them with rounded corners
+    }
