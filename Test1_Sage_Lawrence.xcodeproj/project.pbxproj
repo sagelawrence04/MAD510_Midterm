@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A67678B2CC8430900C6417F /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67678A2CC8430900C6417F /* APIModel.swift */; };
+		1A67678D2CC9BE4100C6417F /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67678C2CC9BE4100C6417F /* MapPin.swift */; };
 		1A9B5C832CC6B676004ABD59 /* Test1_Sage_Lawrence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B5C812CC6B676004ABD59 /* Test1_Sage_Lawrence.xcdatamodeld */; };
 		1A9B5C862CC6B6E0004ABD59 /* Watchlist+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B5C842CC6B6E0004ABD59 /* Watchlist+CoreDataClass.swift */; };
 		1A9B5C872CC6B6E1004ABD59 /* Watchlist+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B5C852CC6B6E0004ABD59 /* Watchlist+CoreDataProperties.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1A67678A2CC8430900C6417F /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		1A67678C2CC9BE4100C6417F /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		1A9B5C822CC6B676004ABD59 /* Test1_Sage_Lawrence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test1_Sage_Lawrence.xcdatamodel; sourceTree = "<group>"; };
 		1A9B5C842CC6B6E0004ABD59 /* Watchlist+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Watchlist+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1A9B5C852CC6B6E0004ABD59 /* Watchlist+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Watchlist+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				1A67678A2CC8430900C6417F /* APIModel.swift */,
 				1AA93CB42CC5D2C700EA0466 /* Assets.xcassets */,
 				1AA93CB92CC5D2C700EA0466 /* Info.plist */,
+				1A67678C2CC9BE4100C6417F /* MapPin.swift */,
 			);
 			path = Test1_Sage_Lawrence;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				1A67678B2CC8430900C6417F /* APIModel.swift in Sources */,
 				1AA93CC32CC5DA6000EA0466 /* ActionFlicksViewController.swift in Sources */,
+				1A67678D2CC9BE4100C6417F /* MapPin.swift in Sources */,
 				1AA93CCB2CC6B07E00EA0466 /* ClipViewController.swift in Sources */,
 				1AA93CA92CC5D2C500EA0466 /* AppDelegate.swift in Sources */,
 				1A9B5C892CC6B90E004ABD59 /* CoreDataStack.swift in Sources */,

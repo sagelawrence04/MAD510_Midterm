@@ -99,10 +99,14 @@ class InformationViewController: UIViewController {
             destinationVC.actionFlick = actionFlick
         }
         
-        
+        if segue.identifier == "openMap" {
+            guard let index = tableView.indexPathForSelectedRow, let itemToPass = tableDataSource.itemIdentifier(for: index) else { return }
+            let destinationVC = segue.destination as! MapViewController
+            destinationVC.fanClub = itemToPass
+        }
     }
 }
 
 extension InformationViewController: UITableViewDelegate {
-    //TODO: Opens up map view
+    //TODO: Opens up map view based on index of the fanClub array
 }
