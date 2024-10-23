@@ -19,8 +19,9 @@ struct ActionFlick: Codable, Hashable {
     var id: String
     var director: String
     var movieTitle: String
-    var preview: String
+    var preview: String?
     var albumImage: String?
+    var genre: String
     var fanClubs: [FanClub]
 }
 

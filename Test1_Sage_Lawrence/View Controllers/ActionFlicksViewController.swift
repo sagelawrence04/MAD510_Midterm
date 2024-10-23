@@ -72,7 +72,7 @@ class ActionFlicksViewController: UIViewController {
                     let jsonDecoder = JSONDecoder()
                     let downloadedResults = try jsonDecoder.decode(ActionFlicks.self, from: fetchedData)
                     self.actionFlicks = downloadedResults.results
-                    print(self.actionFlicks)
+                    //print(self.actionFlicks)
                     DispatchQueue.main.async {
                         self.createSnapshot()
                     }

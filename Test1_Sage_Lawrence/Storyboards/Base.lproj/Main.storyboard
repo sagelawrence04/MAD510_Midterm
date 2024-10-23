@@ -113,7 +113,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="list.and.film" catalog="system" title="Watch Clips"/>
                                 <connections>
-                                    <segue destination="psq-gR-gvz" kind="show" id="aj6-w9-KEC"/>
+                                    <segue destination="ErU-FS-kyX" kind="show" identifier="playClip" id="Mje-ii-N0P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nx-ty-9jR">
@@ -124,6 +124,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addToWatchlist:" destination="V1l-wa-0VZ" eventType="touchUpInside" id="cXa-pD-Qmr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fan Club Locations" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXa-bQ-jav">
                                 <rect key="frame" x="0.0" y="330.33333333333331" width="393" height="30"/>
@@ -132,14 +135,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="v57-HS-3Qr">
-                                <rect key="frame" x="0.0" y="360.33333333333326" width="393" height="408.66666666666674"/>
+                                <rect key="frame" x="5" y="360.33333333333326" width="383" height="408.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vz8-8P-Izc" detailTextLabel="HiX-34-ZbO" style="IBUITableViewCellStyleSubtitle" id="63R-Ka-Mbm">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fanClubCell" textLabel="vz8-8P-Izc" detailTextLabel="HiX-34-ZbO" style="IBUITableViewCellStyleSubtitle" id="63R-Ka-Mbm">
+                                        <rect key="frame" x="0.0" y="50" width="383" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="63R-Ka-Mbm" id="Kz4-gV-LKW">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="352.66666666666669" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vz8-8P-Izc">
@@ -159,7 +162,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="SSq-sv-ffB" kind="showDetail" id="XfN-4o-kbz"/>
+                                            <segue destination="SSq-sv-ffB" kind="showDetail" identifier="openMap" id="XfN-4o-kbz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -181,10 +184,10 @@
                             <constraint firstItem="5kr-Yi-Eny" firstAttribute="leading" secondItem="fIw-0H-zgf" secondAttribute="leading" id="YDG-8f-772"/>
                             <constraint firstItem="5kr-Yi-Eny" firstAttribute="top" secondItem="nFP-er-zXK" secondAttribute="top" id="ZPr-8i-1Ph"/>
                             <constraint firstItem="fIw-0H-zgf" firstAttribute="top" secondItem="ang-io-fHH" secondAttribute="bottom" constant="20" id="gBH-wb-RVY"/>
-                            <constraint firstItem="zHy-2G-m8R" firstAttribute="trailing" secondItem="v57-HS-3Qr" secondAttribute="trailing" id="gok-gs-tko"/>
+                            <constraint firstItem="zHy-2G-m8R" firstAttribute="trailing" secondItem="v57-HS-3Qr" secondAttribute="trailing" constant="5" id="gok-gs-tko"/>
                             <constraint firstItem="nFP-er-zXK" firstAttribute="leading" secondItem="5kr-Yi-Eny" secondAttribute="trailing" constant="8" symbolic="YES" id="n5u-oV-etl"/>
                             <constraint firstItem="8Nx-ty-9jR" firstAttribute="leading" secondItem="zHy-2G-m8R" secondAttribute="leading" id="nC0-pf-zXq"/>
-                            <constraint firstItem="v57-HS-3Qr" firstAttribute="leading" secondItem="zHy-2G-m8R" secondAttribute="leading" id="npS-88-knX"/>
+                            <constraint firstItem="v57-HS-3Qr" firstAttribute="leading" secondItem="zHy-2G-m8R" secondAttribute="leading" constant="5" id="npS-88-knX"/>
                             <constraint firstItem="v57-HS-3Qr" firstAttribute="top" secondItem="zXa-bQ-jav" secondAttribute="bottom" id="qVw-OQ-Kwr"/>
                             <constraint firstItem="zXa-bQ-jav" firstAttribute="leading" secondItem="zHy-2G-m8R" secondAttribute="leading" id="rqG-E7-esn"/>
                             <constraint firstItem="zHy-2G-m8R" firstAttribute="trailing" secondItem="zXa-bQ-jav" secondAttribute="trailing" id="vqw-76-47F"/>
@@ -193,6 +196,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LCw-yI-hKb"/>
+                    <connections>
+                        <outlet property="director" destination="ang-io-fHH" id="1K8-zW-08h"/>
+                        <outlet property="genre" destination="5kr-Yi-Eny" id="2u2-ry-asZ"/>
+                        <outlet property="movie" destination="fIw-0H-zgf" id="Otg-Ix-3aH"/>
+                        <outlet property="tableView" destination="v57-HS-3Qr" id="z5O-l7-rQp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tie-Rm-QeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,19 +234,13 @@
             </objects>
             <point key="canvasLocation" x="3575" y="-2"/>
         </scene>
-        <!--Clip View Controller-->
-        <scene sceneID="RBV-y0-TNq">
+        <!--AV Player View Controller-->
+        <scene sceneID="dpY-Rn-UAR">
             <objects>
-                <viewController id="psq-gR-gvz" customClass="ClipViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sxh-i0-WQJ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Id2-EK-4e6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="q2H-VA-ARP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W7J-Tr-dHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="ErU-FS-kyX" customClass="ClipViewController" customModule="Test1_Sage_Lawrence" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="y2b-io-y6f"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lve-tQ-oTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2781" y="732"/>
         </scene>
@@ -276,9 +279,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="psq-gR-gvz" kind="show" id="RlF-SO-qYK"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -341,7 +341,7 @@
         <scene sceneID="Eub-AV-4yL">
             <objects>
                 <navigationController title="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="sfL-ar-zzm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Action FLicks" image="figure.run.circle" catalog="system" id="Tdq-d1-hRn"/>
+                    <tabBarItem key="tabBarItem" title="Action Flicks" image="figure.run.circle" catalog="system" id="Tdq-d1-hRn"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="f4n-Gi-YE0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sr3-a0-Za4">
@@ -358,9 +358,6 @@
             <point key="canvasLocation" x="1050" y="-2"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="RlF-SO-qYK"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="eye.circle.fill" catalog="system" width="128" height="123"/>
         <image name="figure.run.circle" catalog="system" width="128" height="123"/>
