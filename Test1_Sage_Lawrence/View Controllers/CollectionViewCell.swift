@@ -12,4 +12,20 @@ class CollectionViewCell: UICollectionViewCell {
     //MARK: Outlets
     @IBOutlet weak var image: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // Round corners
+        self.contentView.layer.cornerRadius = 10
+        self.contentView.layer.masksToBounds = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        // Ensure rounding happens after layout
+        self.contentView.layer.cornerRadius = 10
+        self.contentView.layer.masksToBounds = true
+    }
+    
 }

@@ -99,8 +99,6 @@ class ActionFlicksViewController: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //TODO: Tapping on a collectionViewCell opens up the InformationViewController
-        //"openInformation"
         if segue.identifier == "openInformation" {
             guard let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             let movie = collectionViewDataSource.itemIdentifier(for: indexPath)
@@ -112,6 +110,21 @@ class ActionFlicksViewController: UIViewController {
     }
 }
 
-extension ActionFlicksViewController: UICollectionViewDelegate {
-    //TODO: three cells evenly spaced with a small space between them with rounded corners
+extension ActionFlicksViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 6
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //Subtract the given size from the width
+        let deviceWidth = collectionView.frame.width - 20
+        let numberOfItems: CGFloat = 3
+        let itemWidth = deviceWidth / numberOfItems
+        return CGSize(width: itemWidth, height: itemWidth)
+        
+    }
+}
