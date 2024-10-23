@@ -43,7 +43,9 @@ class InformationViewController: UIViewController {
         guard let actionFlick = actionFlick  else { return }
         newMovie.director = actionFlick.director
         newMovie.movieTitle = actionFlick.movieTitle
-        newMovie.videoURL = actionFlick.preview
+        
+        guard let moviePreview = actionFlick.preview else { return }
+        newMovie.videoURL = moviePreview
         watchlist.append(newMovie)
         
         do {
