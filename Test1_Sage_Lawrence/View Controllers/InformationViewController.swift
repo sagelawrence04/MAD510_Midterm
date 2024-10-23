@@ -10,7 +10,8 @@ import UIKit
 class InformationViewController: UIViewController {
 
     //MARK: Properties
-    //TODO: Core Data
+    var coreDataStack: CoreDataStack!
+    var actionFlick: ActionFlick? //allows me to access all saved data
     
     //MARK: Outlets
     //TODO: All the Labels

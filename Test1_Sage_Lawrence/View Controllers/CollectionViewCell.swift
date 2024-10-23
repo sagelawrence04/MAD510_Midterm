@@ -10,12 +10,6 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     //MARK: Outlets
-    // TODO: Just an image
-    
-    // FIXME: fixme
-
-    // ???: ???
-
-    // !!!: !!!
+    @IBOutlet weak var image: UIImageView!
     
 }
