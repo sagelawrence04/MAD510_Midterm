@@ -18,7 +18,8 @@ extension Watchlist {
 
     @NSManaged public var director: String
     @NSManaged public var movieTitle: String
-    @NSManaged public var videoURL: String
+    @NSManaged public var videoURL: String?
+    @NSManaged public var genre: String
 
 }
 

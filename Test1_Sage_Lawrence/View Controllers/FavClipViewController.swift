@@ -6,24 +6,30 @@
 //
 
 import UIKit
+import AVKit
 
 class FavClipViewController: AVPlayerViewController {
+    
+    var preview: Watchlist?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let preview = preview else {return}
+        
+        if let previewString = preview.videoURL,
+           let previewURL = URL(string: previewString) {
+            // Successfully converted to URL
+            print("Preview URL: \(previewURL)")
+            player = AVPlayer(url: previewURL)
+            player?.play()
+            
+        } else {
+            // Handle the case where the string couldn't be converted to a URL
+            print("Invalid URL string")
+        }
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A05A3AB2CCAD3D6006F3A50 /* FavClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A05A3AA2CCAD3D6006F3A50 /* FavClipViewController.swift */; };
 		1A67678B2CC8430900C6417F /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67678A2CC8430900C6417F /* APIModel.swift */; };
 		1A67678D2CC9BE4100C6417F /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A67678C2CC9BE4100C6417F /* MapPin.swift */; };
 		1A9B5C832CC6B676004ABD59 /* Test1_Sage_Lawrence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B5C812CC6B676004ABD59 /* Test1_Sage_Lawrence.xcdatamodeld */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A05A3AA2CCAD3D6006F3A50 /* FavClipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavClipViewController.swift; sourceTree = "<group>"; };
 		1A67678A2CC8430900C6417F /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		1A67678C2CC9BE4100C6417F /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		1A9B5C822CC6B676004ABD59 /* Test1_Sage_Lawrence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test1_Sage_Lawrence.xcdatamodel; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				1AA93CC82CC5DB3600EA0466 /* CollectionViewCell.swift */,
 				1AA93CCA2CC6B07E00EA0466 /* ClipViewController.swift */,
 				1AA93CCC2CC6B11D00EA0466 /* MapViewController.swift */,
+				1A05A3AA2CCAD3D6006F3A50 /* FavClipViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A67678B2CC8430900C6417F /* APIModel.swift in Sources */,
+				1A05A3AB2CCAD3D6006F3A50 /* FavClipViewController.swift in Sources */,
 				1AA93CC32CC5DA6000EA0466 /* ActionFlicksViewController.swift in Sources */,
 				1A67678D2CC9BE4100C6417F /* MapPin.swift in Sources */,
 				1AA93CCB2CC6B07E00EA0466 /* ClipViewController.swift in Sources */,

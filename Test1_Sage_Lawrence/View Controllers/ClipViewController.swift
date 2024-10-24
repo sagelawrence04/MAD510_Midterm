@@ -16,7 +16,7 @@ class ClipViewController: AVPlayerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let actionFlick = actionFlick  else { return }
+        guard let actionFlick = actionFlick  else {return}
         
         if let previewString = actionFlick.preview,
            let previewURL = URL(string: previewString) {
