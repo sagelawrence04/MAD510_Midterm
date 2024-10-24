@@ -8,10 +8,10 @@
 import UIKit
 import AVKit
 
+//Displays the Favourited Clip
 class FavClipViewController: AVPlayerViewController {
     
     var preview: Watchlist?
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

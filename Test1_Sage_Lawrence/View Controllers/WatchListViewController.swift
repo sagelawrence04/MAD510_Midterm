@@ -46,7 +46,7 @@ class WatchListViewController: UIViewController {
         }
     }
     
-    // MARK: - Delete Item from Watchlist Watchlist
+    //MARK: Delete Item from Watchlist Watchlist
     func deleteFilm(_ film: Watchlist) {
         coreDataStack.managedContext.delete(film)
         do {
@@ -80,7 +80,7 @@ class WatchListViewController: UIViewController {
     }
     
 
-    // MARK: - Navigation
+    //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Shows Video Clip
         if segue.identifier == "favClip" {
@@ -91,7 +91,10 @@ class WatchListViewController: UIViewController {
     }
 }
 
+//MARK: TableView Extension
 extension WatchListViewController: UITableViewDelegate {
+    
+    //Functionality to delete movie
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [unowned self] action, view, completionHandler in
             let movieToDelete = self.watchlist[indexPath.row]

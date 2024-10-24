@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 
+//Shows the movie clip from the InformationVC
 class ClipViewController: AVPlayerViewController {
 
     //MARK: Properties

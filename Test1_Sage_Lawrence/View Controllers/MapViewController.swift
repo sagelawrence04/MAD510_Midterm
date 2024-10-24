@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+//Oens up the map
 class MapViewController: UIViewController {
 
     //MARK: Properties
@@ -23,7 +24,6 @@ class MapViewController: UIViewController {
         guard let fanClub = fanClub else {return}
         print("Latitude: \(fanClub.latitude), Longitude: \(fanClub.longitude)")
 
-        
         let pinLocation = CLLocationCoordinate2D(latitude: fanClub.latitude, longitude: fanClub.longitude)
         let region = MKCoordinateRegion(center: pinLocation, latitudinalMeters: 1_000, longitudinalMeters: 1_000)
         mapView.setRegion(region, animated: true)
@@ -31,6 +31,7 @@ class MapViewController: UIViewController {
         let pin = MapPin(coordinate: pinLocation, title: fanClub.manager, subtitle: fanClub.address)
         mapView.addAnnotation(pin)
         
+        //Disables user from moving around the map
         mapView.isZoomEnabled = false
         mapView.isRotateEnabled = false
         mapView.isScrollEnabled = false
@@ -45,6 +46,7 @@ extension MapViewController: MKMapViewDelegate {
             let identifier = "mapPin"
             var view: MKMarkerAnnotationView
             
+            //The subtitle appears when clicked (callout)
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
                 dequeuedView.annotation = annotation
                 view = dequeuedView

@@ -22,35 +22,39 @@ class InformationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: Actions
+    //Adds the movie to the watchlist Core Data Model
     @IBAction func addToWatchlist(_ sender: UIButton) {
         guard let actionFlick = actionFlick  else { return }
 
-    
         let alert = UIAlertController(title: "Add to Watchlist", message: "Would you like to add \(actionFlick.movieTitle) by \(actionFlick.director) to your weekend watchlist?", preferredStyle: .alert)
 
-       let saveAction = UIAlertAction(title: "Add it!", style: .default) { [unowned self] _ in
-           self.addFlick(movie: actionFlick)
-       }
-       let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let saveAction = UIAlertAction(title: "Add it!", style: .default) { [unowned self] _ in
+            self.addFlick(movie: actionFlick)
+            navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
-       alert.addAction(saveAction)
-       alert.addAction(cancelAction)
-       present(alert, animated: true)
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
     
+    //Method to help with adding movie to Core Data
     func addFlick(movie: ActionFlick){
         let newMovie = Watchlist(context: coreDataStack.managedContext)
         guard let actionFlick = actionFlick  else { return }
         newMovie.director = actionFlick.director
         newMovie.movieTitle = actionFlick.movieTitle
+        newMovie.genre = actionFlick.genre
         
         guard let moviePreview = actionFlick.preview else { return }
         newMovie.videoURL = moviePreview
+        
         watchlist.append(newMovie)
         
         do {
             try coreDataStack.managedContext.save()
-            print("success")
+            print("Success!")
         } catch {
             print("Error saving user: \(error.localizedDescription)")
         }
@@ -61,8 +65,6 @@ class InformationViewController: UIViewController {
 
         //Unwrapping actionFlick
         guard let actionFlick = actionFlick  else { return }
-        //Unwraping fanClubs
-        fanClubs = actionFlick.fanClubs
         
         //Setting labels
         director.text = actionFlick.director
@@ -71,8 +73,6 @@ class InformationViewController: UIViewController {
         
         //Loads the fanClubs
         createSnapshot()
-
-        tableView.delegate = self
     }
     
     //MARK: - Tableview Diffable Datasource
@@ -83,11 +83,11 @@ class InformationViewController: UIViewController {
         return cell
     }
     
-    //MARK: - Create Snapshot for Tableview
+    //MARK: Create Snapshot for Tableview
     func createSnapshot() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, FanClub>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(fanClubs!)
+        snapshot.appendItems(actionFlick!.fanClubs)
         tableDataSource.apply(snapshot, animatingDifferences: true)
     }
     
@@ -99,14 +99,11 @@ class InformationViewController: UIViewController {
             destinationVC.actionFlick = actionFlick
         }
         
+        //This opens the map
         if segue.identifier == "openMap" {
             guard let index = tableView.indexPathForSelectedRow, let itemToPass = tableDataSource.itemIdentifier(for: index) else { return }
             let destinationVC = segue.destination as! MapViewController
             destinationVC.fanClub = itemToPass
         }
     }
-}
-
-extension InformationViewController: UITableViewDelegate {
-    //TODO: Opens up map view based on index of the fanClub array
 }

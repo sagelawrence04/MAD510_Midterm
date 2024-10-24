@@ -1,6 +1,7 @@
 import Foundation
 import MapKit
 
+//Used to display the pin and it's subtitle
 class MapPin: NSObject, MKAnnotation{
     var coordinate: CLLocationCoordinate2D
     var title: String?
@@ -11,7 +12,6 @@ class MapPin: NSObject, MKAnnotation{
         let placemark = MKPlacemark(coordinate: coordinate)
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = location
-        
         return mapItem
     }
     
